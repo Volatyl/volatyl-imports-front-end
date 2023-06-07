@@ -6,12 +6,24 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  color: black;
+  color: rgb(40, 40, 40);
+  border: none;
+}
+
+/* GENERAL STYLING CLASSES */
+.input {
+  background-color: rgb(236, 236, 236);
+  border-radius: 5px;
+}
+.text-input {
+  border: 1px solid rgba(0, 0, 0, 0.171);
+  border-radius: 5px;
 }
 
 /* HEADER styling */
 #header {
-  min-height: 2rem;
+  min-height: 7rem;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,11 +70,41 @@ nav .navlinks:hover {
 
 /* FILTER styling */
 .filter-card {
+  display: inline-block;
   margin: 1.5rem;
   padding: 1rem;
-  border: 1px solid black;
+  border: 1px solid rgb(180, 180, 180);
 }
 .filter-card > * {
-  margin: 0.3rem;
-  padding: 0.3rem;
+  margin: 1rem 0.3rem;
+  padding: 0.5rem;
+}
+
+.search-btn {
+  border: 1px solid rgba(0, 0, 0, 0.171);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.search-btn > * {
+  padding: 0 0.4rem;
+  background-color: rgba(0, 0, 0, 0);
+}
+.search-btn button {
+  font-size: 1rem;
+}
+
+/* CARS styling */
+.car-card {
+  margin: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.171);
+}
+
+.car-images {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.car-card .car-details > * {
+  padding: 0.7rem 1rem;
 }
