@@ -9,6 +9,7 @@ const Cars = () => {
 
   function handleclick(car) {
     console.log(car);
+    dispatch({ type: "SHOW-CAR", payload: car });
   }
 
   return (

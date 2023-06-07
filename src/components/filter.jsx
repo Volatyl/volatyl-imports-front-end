@@ -12,14 +12,14 @@ const Filter = () => {
         <input type="text" placeholder="Vehicle name" className="text-input" />
         <br />
         <select name="make" id="make" className="input">
-          <option value="Make" selected>
+          <option value="Make" defaultValue>
             Make
           </option>
           <option value="Toyota">Toyota</option>
           <option value="Audi">Audi</option>
         </select>
         <select name="model" id="make" className="input">
-          <option value="Model" selected>
+          <option value="Model" defaultValue>
             Model
           </option>
           <option value="Toyota">Toyota</option>
@@ -39,7 +39,10 @@ const Filter = () => {
         <input type="text" placeholder="Max price" className="input" />
         {/* search button */}
         <div className="search-btn">
-          <FontAwesomeIcon icon={faSearch} style={{ color: "rgb(215, 229, 224)" }} />
+          <FontAwesomeIcon
+            icon={faSearch}
+            style={{ color: "rgb(215, 229, 224)" }}
+          />
           <button>Search</button>
         </div>
       </form>

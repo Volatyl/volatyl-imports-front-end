@@ -72,7 +72,7 @@
     transition: all 0.5s ease-out;
     display: block;
     background-color: rgb(255, 255, 255);
-    width: 50%;
+    width: 100%;
     position: absolute;
     top: 7rem;
     right: 0;
@@ -175,6 +175,11 @@
   padding: 0.5rem;
   width: 20%;
 }
+@media (max-width: 540px) {
+  #add-car-form > * {
+    width: 100%;
+  }
+}
 
 /* BUTTON styling */
 .btn {
@@ -185,5 +190,4 @@
 }
 
 /* FOOTER styling */
-#footer {
-}
+
