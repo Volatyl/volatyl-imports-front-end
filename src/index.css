@@ -41,16 +41,16 @@
 
 /* NAVBAR styling */
 
-nav {
+.links-container {
   display: flex;
   gap: 0.1rem;
   margin-right: 1.5rem;
 }
-nav .navlinks {
+.links-container .navlinks {
   padding: 0.2rem 1rem;
   border-radius: 5px;
 }
-nav .navlinks:hover {
+.links-container .navlinks:hover {
   background-color: rgb(215, 229, 224);
 }
 .nav-icon {
@@ -65,18 +65,26 @@ nav .navlinks:hover {
     top: 3rem;
     right: 0rem;
   }
-  #links-container {
+  .links-container {
+    display: none;
+  }
+  .links-container-mobile {
+    transition: all 0.5s ease-out;
     display: block;
     background-color: rgb(255, 255, 255);
-    width: 100%;
+    width: 50%;
     position: absolute;
-    top: 6rem;
-    left: 0;
+    top: 7rem;
+    right: 0;
+    box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2);
   }
   .navlinks {
+    transition: all 0.5s ease-out;
     text-align: center;
+    /* color: white; */
     display: block;
   }
+
   .navlinks:last-child {
     margin-bottom: 1rem;
   }
