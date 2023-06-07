@@ -7,12 +7,25 @@ const Cars = () => {
   const cars = Array.from(state.cars);
   //   console.log(cars);
 
+  function handleclick(car) {
+    console.log(car);
+  }
+
   return (
     <div>
       {/* <Filter /> */}
       {cars.map((car) => {
+        const description = car.description.substring(
+          0,
+          car.description.indexOf(".") + 1
+        );
+        const formattedPrice = car.price.toLocaleString();
         return (
-          <div key={car.model} className="car-card">
+          <div
+            key={car.model}
+            className="car-card"
+            onClick={() => handleclick(car)}
+          >
             <div className="img-container">
               <img src={car.image} alt="car img" className="car-images" />
             </div>
@@ -21,13 +34,14 @@ const Cars = () => {
                 <p>{car.year}</p>
                 <h3>{car.model}</h3>
               </div>
-              <p>{car.description}</p>
+
               <div className="car-specs">
                 <p>{car.drive}</p>
                 <p>{car.cc}</p>
                 <p>{car.usage}</p>
               </div>
-              <h3>KES {car.price}</h3>
+              <p>{description}</p>
+              <h3>KES {formattedPrice}</h3>
             </div>
           </div>
         );
