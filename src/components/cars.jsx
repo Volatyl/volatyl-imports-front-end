@@ -12,8 +12,8 @@ const Cars = () => {
   }
 
   return (
-    <div>
-      {/* <Filter /> */}
+    <div id="cars-container">
+      <Filter />
       {cars.map((car) => {
         const description = car.description.substring(
           0,

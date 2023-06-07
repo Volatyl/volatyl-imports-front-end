@@ -27,9 +27,17 @@ const NavBar = () => {
   return (
     <>
       <nav>
-        <div className={toggle ? "links-container-mobile" : "links-container"}>
+        <div
+          className={toggle ? "links-container-mobile" : "links-container"}
+          onClick={() => {
+            setToggle(false);
+          }}
+        >
           <NavLink to="/cars" className="navlinks">
             Cars
+          </NavLink>
+          <NavLink to="/addcar" className="navlinks">
+            Add Car
           </NavLink>
           <NavLink to="/about" className="navlinks">
             About

@@ -93,7 +93,7 @@
 /* FILTER styling */
 .filter-card {
   display: inline-block;
-  margin: 1.5rem;
+  margin: 1rem;
   padding: 1rem;
   border: 1px solid rgb(180, 180, 180);
 }
@@ -117,8 +117,12 @@
 }
 
 /* CARS styling */
+#cars-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
 .car-card {
-  margin: 1.5rem;
+  margin: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.171);
   border-radius: 5px;
   overflow: hidden;
@@ -150,4 +154,36 @@
   background-color: rgb(247, 236, 236);
   padding: 0.5rem;
   border-radius: 5px;
+}
+
+/* ADD CAR styling */
+#addcar {
+  margin: 1rem;
+}
+#add-car-form > * {
+  display: block;
+  background-color: antiquewhite;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 50%;
+}
+#submit {
+  display: block;
+  background-color: rgb(65, 65, 65);
+  color: white;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 20%;
+}
+
+/* BUTTON styling */
+.btn {
+  margin: 1.5rem;
+  background-color: rgb(65, 65, 65);
+  color: white;
+  padding: 0.5rem;
+}
+
+/* FOOTER styling */
+#footer {
 }
