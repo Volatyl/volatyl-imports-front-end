@@ -58,7 +58,7 @@
 }
 
 /* RESPONSIVE NAVABR */
-@media (max-width: 540px) {
+@media (max-width: 700px) {
   .nav-icon {
     display: block;
     position: absolute;
@@ -92,7 +92,7 @@
 
 /* FILTER styling */
 .filter-card {
-  display: inline-block;
+  /* display: inline-block; */
   margin: 1rem;
   padding: 1rem;
   border: 1px solid rgb(180, 180, 180);
@@ -115,7 +115,11 @@
 .search-btn button {
   font-size: 1rem;
 }
-
+@media (max-width: 700px) {
+  .filter-card {
+    max-width: 100%;
+  }
+}
 /* CARS styling */
 #cars-container {
   display: grid;
@@ -175,8 +179,19 @@
   padding: 0.5rem;
   width: 20%;
 }
-@media (max-width: 540px) {
+@media (max-width: 700px) {
   #add-car-form > * {
+    width: 100%;
+  }
+}
+
+/* SHOWCAR styling */
+.show-car img {
+  width: 50%;
+}
+
+@media (max-width: 700px) {
+  .show-car img {
     width: 100%;
   }
 }
@@ -190,4 +205,3 @@
 }
 
 /* FOOTER styling */
-

@@ -20,7 +20,7 @@ const NavBar = () => {
   }, []);
 
   useEffect(() => {
-    if (screenSize > 540) {
+    if (screenSize > 700) {
       setToggle(false);
     }
   }, [screenSize]);
