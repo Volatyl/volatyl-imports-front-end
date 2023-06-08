@@ -186,13 +186,52 @@
 }
 
 /* SHOWCAR styling */
+#show-main {
+  margin: 1rem;
+}
+.show-car {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.show-car > * {
+  padding: 0.5rem;
+}
 .show-car img {
-  width: 50%;
+  width: 100%;
+}
+.show-car-details > p,
+h2 {
+  padding-bottom: 1rem;
+}
+.showBtn {
+  background-color: rgb(0, 158, 105);
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+}
+.show-car-details p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+.show-car-specs {
+  display: flex;
+  /* gap: 2rem; */
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.specs-left > * {
+  margin-right: 2rem;
+  display: block;
+  border-bottom: 1px solid rgb(177, 177, 177);
+}
+.specs-right > * {
+  border-bottom: 1px solid rgb(177, 177, 177);
 }
 
 @media (max-width: 700px) {
-  .show-car img {
-    width: 100%;
+  .show-car {
+    display: block;
   }
 }
 
