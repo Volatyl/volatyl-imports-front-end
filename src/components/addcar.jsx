@@ -19,8 +19,8 @@ const Addcar = () => {
 
   function handleSubmit(e) {
     // e.preventDefault();
-    console.log(car);
-    fetch("http://127.0.0.1:8000/cars/add", {
+    // console.log(car);
+    fetch("https://volatyl-imports.onrender.com/cars/add", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

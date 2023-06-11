@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { ProjectContext } from "./context";
+import { NavLink } from "react-router-dom";
 
 const Showcar = () => {
   const { state, dispatch } = useContext(ProjectContext);
@@ -8,6 +9,26 @@ const Showcar = () => {
   let formattedPrice;
   if (car.price) {
     formattedPrice = car.price.toLocaleString();
+  }
+
+  function handleDelete() {
+    console.log(car.id);
+    fetch(`https://volatyl-imports.onrender.com/cars/${car.id}`, {
+      method: "DELETE",
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Car successfully deleted
+          // Update the state to reflect the deletion
+          dispatch({ type: "DELETE_CAR", payload: car.id });
+        } else {
+          // Handle delete error
+          console.log("Error deleting car");
+        }
+      })
+      .catch((error) => {
+        console.log("Error deleting car:", error);
+      });
   }
 
   return (
@@ -21,8 +42,24 @@ const Showcar = () => {
             {car.brand} {car.model}
           </h2>
           <p>{car.description}</p>
-          <button className="showBtn">Enquire via whatsapp</button>
+          <button className="showBtn">
+            <a
+              href="https://wa.me/254705790997"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Enquire via whatsapp
+            </a>
+          </button>
           <button className="showBtn">Call</button>
+
+          <NavLink to="/edit" className="showBtn">
+            Edit Car
+          </NavLink>
+
+          <button className="showBtn" onClick={handleDelete}>
+            Delete
+          </button>
         </div>
       </div>
       <h2 id="car-price">Ksh {formattedPrice}</h2>
@@ -41,6 +78,12 @@ const Showcar = () => {
           <p>{car.cc}</p>
           <p>{car.drive}</p>
         </div>
+      </div>
+      <div id="showCarFooter">
+        <h2>More Vehicles</h2>
+        <p>
+          People who viewed the {car.brand} {car.model} also consider
+        </p>
       </div>
     </div>
   );

@@ -5,18 +5,29 @@ import Showcar from "./showcar";
 
 const Cars = () => {
   const { state, dispatch } = useContext(ProjectContext);
-  const cars = Array.from(state.cars);
+  const filteredCars = Array.from(state.filteredCars);
+  const filteredTwo = Array.from(state.filteredTwo);
+
+  const show = state.showCar;
 
   function handleclick(car) {
-    dispatch({ type: "SHOW-CAR", payload: car });
+    console.log(car);
+    dispatch({ type: "SHOW_CAR", payload: car });
+    dispatch({ type: "SHOW_CAR_BOOL", payload: true });
+
+    const newCars = filteredCars.filter((acar) => acar.id !== car.id);
+    dispatch({ type: "FILTER_CARS_SHOW", payload: newCars });
   }
+
+  const carsToShow = show ? filteredTwo : filteredCars;
+  console.log(state.showCar);
 
   return (
     <>
-      <Showcar />
+      {show && <Showcar />}
       <div id="cars-container">
-        <Filter />
-        {cars.map((car) => {
+        {!show && <Filter />}
+        {carsToShow.map((car) => {
           const description = car.description.substring(
             0,
             car.description.indexOf(".") + 1

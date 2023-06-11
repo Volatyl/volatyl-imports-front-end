@@ -24,6 +24,10 @@ const NavBar = () => {
       setToggle(false);
     }
   }, [screenSize]);
+
+  function handleClick() {
+    dispatch({ type: "SHOW-CAR-BOOL", payload: false });
+  }
   return (
     <>
       <nav>
@@ -33,7 +37,7 @@ const NavBar = () => {
             setToggle(false);
           }}
         >
-          <NavLink to="/cars" className="navlinks">
+          <NavLink to="/cars" className="navlinks" onClick={handleClick}>
             Cars
           </NavLink>
           <NavLink to="/addcar" className="navlinks">
