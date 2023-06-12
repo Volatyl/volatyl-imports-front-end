@@ -20,7 +20,7 @@ const Cars = () => {
   }
 
   const carsToShow = show ? filteredTwo : filteredCars;
-  console.log(state.showCar);
+  console.log(carsToShow);
 
   return (
     <>
