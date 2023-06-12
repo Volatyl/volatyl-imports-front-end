@@ -41,7 +41,9 @@ function reducer(state, action) {
       return {
         ...state,
         cars: state.cars.filter((car) => car.id !== action.payload),
-        filteredCars: state.filteredCars.filter((car) => car.id !== action.payload),
+        filteredCars: state.filteredCars.filter(
+          (car) => car.id !== action.payload
+        ),
         selectedCar: {},
         showCar: false,
       };
