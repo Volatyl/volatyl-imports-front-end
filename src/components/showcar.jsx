@@ -12,23 +12,21 @@ const Showcar = () => {
   }
 
   function handleDelete() {
-    console.log(car.id);
-    fetch(`https://volatyl-imports.onrender.com/cars/${car.id}`, {
-      method: "DELETE",
-    })
-      .then((response) => {
-        if (response.ok) {
-          // Car successfully deleted
-          // Update the state to reflect the deletion
-          dispatch({ type: "DELETE_CAR", payload: car.id });
-        } else {
-          // Handle delete error
-          console.log("Error deleting car");
-        }
-      })
-      .catch((error) => {
-        console.log("Error deleting car:", error);
-      });
+    alert("Delete Disabled by admin");
+    // fetch(`https://volatyl-imports.onrender.com/cars/${car.id}`, {
+    //   method: "DELETE",
+    // })
+    //   .then((response) => {
+    //     if (response.ok) {
+    //       dispatch({ type: "DELETE_CAR", payload: car.id });
+    //     } else {
+    //       // Handle delete error
+    //       console.log("Error deleting car");
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.log("Error deleting car:", error);
+    //   });
   }
 
   return (
@@ -51,13 +49,18 @@ const Showcar = () => {
               Enquire via whatsapp
             </a>
           </button>
-          <button className="showBtn">Call</button>
+          <button
+            className="showBtn"
+            onClick="window.location.href = 'tel:+254705790997'"
+          >
+            Call
+          </button>
 
           <NavLink to="/edit" className="showBtn">
             Edit Car
           </NavLink>
 
-          <button className="showBtn" onClick={handleDelete}>
+          <button className="showBtn" onClick={handleDelete} >
             Delete
           </button>
         </div>

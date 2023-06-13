@@ -20,21 +20,21 @@ const Editcar = () => {
     }));
   }
   function handleSubmit(e) {
-    e.preventDefault();
-    fetch(`https://volatyl-imports.onrender.com/edit/${state.selectedCar.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(car),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        // history("/cars");
-      })
-      .catch((error) => console.log(error));
-    history("/");
+    alert("Editing Disabled by admin");
+    // fetch(`https://volatyl-imports.onrender.com/edit/${state.selectedCar.id}`, {
+    //   method: "PUT",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(car),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     // history("/cars");
+    //   })
+    //   .catch((error) => console.log(error));
+    // history("/");
   }
   return (
     <div>

@@ -18,19 +18,19 @@ const Addcar = () => {
   });
 
   function handleSubmit(e) {
-    // e.preventDefault();
-    // console.log(car);
-    fetch("https://volatyl-imports.onrender.com/cars/add", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(car),
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.log(error));
-    alert("Car added successfully");
+    alert("Add function Disabled by admin");
+
+  //   fetch("https://volatyl-imports.onrender.com/cars/add", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-type": "application/json",
+  //     },
+  //     body: JSON.stringify(car),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data))
+  //     .catch((error) => console.log(error));
+  //   alert("Car added successfully");
   }
 
   function handleChange(e) {
