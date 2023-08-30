@@ -11,10 +11,12 @@ const Cars = () => {
   const show = state.showCar;
 
   function handleclick(car) {
-    console.log(car);
     dispatch({ type: "SHOW_CAR", payload: car });
     dispatch({ type: "SHOW_CAR_BOOL", payload: true });
-
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     const newCars = filteredCars.filter((acar) => acar.id !== car.id);
     dispatch({ type: "FILTER_CARS_SHOW", payload: newCars });
   }
