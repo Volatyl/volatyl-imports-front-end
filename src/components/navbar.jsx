@@ -41,7 +41,7 @@ const NavBar = () => {
             Cars
           </NavLink>
           <NavLink to="/addcar" className="navlinks">
-            Add Car
+            Post Car
           </NavLink>
           <NavLink to="/about" className="navlinks">
             About
